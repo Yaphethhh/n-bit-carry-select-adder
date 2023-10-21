@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity nBitCSA is
-    generic (n: integer := 64);
+    generic (n: integer := 16);
     Port (
         c_in : in STD_LOGIC;
         c_out: out STD_LOGIC;
@@ -46,7 +46,7 @@ architecture Behavioral of nBitCSA is
     component romFile2 is
             Port (
             address : in STD_LOGIC_VECTOR(3 downto 0);
-            data    : out STD_LOGIC_VECTOR(63 downto 0);
+            data    : out STD_LOGIC_VECTOR(16 downto 0);
             en : in std_logic;
             clk : in std_logic
         );
